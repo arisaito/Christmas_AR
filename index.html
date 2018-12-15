@@ -70,8 +70,14 @@
     <!-- Add the 'xrweb' attribute to your scene to make it an 8th Wall Web A-FRAME scene. -->
     <a-scene xrweb tap-recenter loading-screen>
 
-      <a-camera position="0 8 8"></a-camera>
+        <a-assets>
+            <a-asset-item id="tree-obj" src="model/tree.obj"></a-asset-item>
+            <a-asset-item id="tree-mtl" src="model/tree.mtl"></a-asset-item>
+        </a-assets>
 
+      <a-camera position="0 8 8"></a-camera>
+ 
+      <!-- Light -->
       <a-entity
         light="type: directional;
                castShadow: true;
@@ -88,6 +94,17 @@
       </a-entity>
 
       <a-light type="ambient" intensity="1"></a-light>
+
+      <!-- Object -->
+
+      <a-entity 
+        id="tree"
+        obj-model="obj:#tree-obj;
+                  mtl:#tree-mtl;"
+        position="0 0 -4"
+        scale="2 2 2"
+        rotation="0 0 0">
+      </a-entity>   
 
       <a-box
         position="-1.7 0.5 -2"
