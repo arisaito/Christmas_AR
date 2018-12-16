@@ -40,6 +40,20 @@
       })
     </script>
 
+    <style type="text/css">
+      .menu {
+        width: 320px;
+        position: fixed;
+        top: 0px;
+        z-index: 100;
+      }
+
+      .main {
+        width: 860px;
+        margin: 0 auto;
+      }
+    </style>
+
   </head>
   <body>
     <!-- 2D overlay UI can be done in HTML -->
@@ -58,12 +72,30 @@
                   top: 0;
                   bottom: 0;
                   text-align: center;
-                  font-size: 5vh;
+                  font-size: 3vh;
                   background-color: white;
                   padding: 5vh;
                   font-family: sans-serif;
                   pointer-events: auto;">
-        Loading...
+        Loading
+      </div>
+    </div>
+
+    <div class="menu">
+      <ul>
+        <li><a href="#menu01">menu01</a></li>
+        <li><a href="#menu02">menu02</a></li>
+        <li><a href="#menu03">menu03</a></li>
+        <li><a href="#menu04">menu04</a></li>
+        <li><a href="#menu05">menu05</a></li>
+      </ul>
+    </div>
+    <div class="main">
+      <div class="box" id="menu01">
+        <h2>menu01</h2>
+        <p><a href="#">ここに本文が入ります</a></p>
+        <p><a href="#">ここに本文が入ります</a></p>
+        <p><a href="#">ここに本文が入ります</a></p>
       </div>
     </div>
 
@@ -71,8 +103,10 @@
     <a-scene xrweb tap-recenter loading-screen>
 
         <a-assets>
-            <a-asset-item id="tree-obj" src="model/tree.obj"></a-asset-item>
-            <a-asset-item id="tree-mtl" src="model/tree.mtl"></a-asset-item>
+            <a-asset-item id="tree-obj" src="models/tree.obj"></a-asset-item>
+            <a-asset-item id="tree-mtl" src="models/tree.mtl"></a-asset-item>
+            <a-asset-item id="ball-obj" src="models/ball.obj"></a-asset-item>
+            <a-asset-item id="ball-mtl" src="models/ball.jpg"></a-asset-item>
         </a-assets>
 
       <a-camera position="0 8 8"></a-camera>
@@ -96,43 +130,20 @@
       <a-light type="ambient" intensity="1"></a-light>
 
       <!-- Object -->
-
       <a-entity 
         id="tree"
         obj-model="obj:#tree-obj;
                   mtl:#tree-mtl;"
         position="0 0 -4"
-        scale="2 2 2"
+        scale="1 1 1"
         rotation="0 0 0">
-      </a-entity>   
-
-      <a-box
-        position="-1.7 0.5 -2"
-        rotation="0 45 0"
-        material="roughness: 0.8; metalness: 0.2; color: #00EDAF;"
-        shadow>
-      </a-box>
-
-      <a-sphere
-        position="-1.175 1.25 -5.2"
-        radius="1.25"
-        material="roughness: 0.8; metalness: 0.2; color: #DD0065;"
-        shadow>
-      </a-sphere>
-
-      <a-cylinder
-        position="2 0.75 -1.85"
-        radius="0.5"
-        height="1.5"
-        material="roughness: 0.8; metalness: 0.2; color: #FCEE21;"
-        shadow>
-      </a-cylinder>
+      </a-entity>
 
       <a-circle
         position="0 0 -4"
         rotation="-90 0 0"
         radius="4"
-        material="roughness: 0.8; metalness: 0.5; color: #AD50FF"
+        material="roughness: 0.8; metalness: 0.5; color: white"
         shadow>
       </a-circle>
     </a-scene>
