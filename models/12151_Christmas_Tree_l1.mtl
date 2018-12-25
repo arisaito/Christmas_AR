@@ -12,7 +12,7 @@ newmtl Christmas_Tree
 	Kd 0.0157 0.1176 0.0000
 	Ks 0.2250 0.2250 0.2250
 	Ke 0.0000 0.0000 0.0000
-	map_bump ./Map__7_Normal Bump.jpg
+	map_bump Map__7_Normal Bump.jpg
 
 newmtl ball_metall
 	Ns 60.0000
