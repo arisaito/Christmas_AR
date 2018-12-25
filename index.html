@@ -66,7 +66,7 @@
                   padding: 5vh;
                   font-family: sans-serif;
                   pointer-events: auto;">
-        Loading
+        <img src="images/loading.png">
       </div>
     </div>
 
@@ -74,12 +74,10 @@
     <a-scene xrweb tap-recenter loading-screen>
 
         <a-assets>
-            <a-asset-item id="tree-obj" src="models/12151_Christmas_Tree_l1.obj"></a-asset-item>
-            <a-asset-item id="tree-mtl" src="models/12151_Christmas_Tree_l1.mtl"></a-asset-item>
+            <a-asset-item id="tree-obj" src="models/tree.obj"></a-asset-item>
+            <a-asset-item id="tree-mtl" src="models/tree.mtl"></a-asset-item>
             <a-asset-item id="mone-obj" src="models/monetree.obj"></a-asset-item>
             <a-asset-item id="mone-mtl" src="models/monetree.mtl"></a-asset-item>
-            
-            
         </a-assets>
 
       <a-camera position="0 8 8"></a-camera>
@@ -116,8 +114,8 @@
                   mtl:#tree-mtl;"
 
         position="0 0 0"
-        scale="0.05 0.05 0.05"
-        rotation="-90 0 0">
+        scale="1 1 1"
+        rotation="0 0 0">
       </a-entity>
 
       <a-entity 
