@@ -74,8 +74,11 @@
     <a-scene xrweb tap-recenter loading-screen>
 
         <a-assets>
-            <a-asset-item id="tree-obj" src="models/tree.obj"></a-asset-item>
-            <a-asset-item id="tree-mtl" src="models/tree.mtl"></a-asset-item>
+            <a-asset-item id="tree-obj" src="models/12151_Christmas_Tree_l1.obj"></a-asset-item>
+            <a-asset-item id="tree-mtl" src="models/12151_Christmas_Tree_l1.mtl"></a-asset-item>
+            <a-asset-item id="mone-obj" src="models/monetree.obj"></a-asset-item>
+            <a-asset-item id="mone-mtl" src="models/monetree.mtl"></a-asset-item>
+            
             
         </a-assets>
 
@@ -115,6 +118,16 @@
         position="0 0 -4"
         scale="0.4 0.4 0.4"
         rotation="-90 0 0">
+      </a-entity>
+
+      <a-entity 
+        id="mone"
+        obj-model="obj:#mone-obj;
+                  mtl:#mone-mtl;"
+
+        position="0 0 0"
+        scale="0.5 0.5 0.5"
+        rotation="0 0 0">
       </a-entity>
 
       <a-circle
