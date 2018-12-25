@@ -11,7 +11,6 @@
     <script async src="//apps.8thwall.com/xrweb?appKey=4LVQSg4DpURAKOBIJG31pSwvbxNjWG0jR6r0jKa3GhLANgqHsBVFWocyDiHj2Se3dGNNFB"></script>
 
     <!-- aframe snow component -->
-    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script> 
     <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script> 
 
     <script>
@@ -44,20 +43,6 @@
       })
     </script>
 
-    <style type="text/css">
-      .menu {
-        width: 320px;
-        position: fixed;
-        top: 0px;
-        z-index: 100;
-      }
-
-      .main {
-        width: 860px;
-        margin: 0 auto;
-      }
-    </style>
-
   </head>
   <body>
     <!-- 2D overlay UI can be done in HTML -->
@@ -85,29 +70,12 @@
       </div>
     </div>
 
-    <div class="menu">
-      <ul>
-        <li><a href="#menu01">menu01</a></li>
-        <li><a href="#menu02">menu02</a></li>
-      </ul>
-    </div>
-    <div class="main">
-      <div class="box" id="menu01">
-        <h2>menu01</h2>
-        <p><a href="#">ここに本文が入ります</a></p>
-        <p><a href="#">ここに本文が入ります</a></p>
-        <p><a href="#">ここに本文が入ります</a></p>
-      </div>
-    </div>
-
     <!-- Add the 'xrweb' attribute to your scene to make it an 8th Wall Web A-FRAME scene. -->
     <a-scene xrweb tap-recenter loading-screen>
 
         <a-assets>
             <a-asset-item id="tree-obj" src="models/tree.obj"></a-asset-item>
             <a-asset-item id="tree-mtl" src="models/tree.mtl"></a-asset-item>
-            <a-asset-item id="ball-obj" src="models/ball.obj"></a-asset-item>
-            <a-asset-item id="ball-mtl" src="models/ball.jpg"></a-asset-item>
         </a-assets>
 
       <a-camera position="0 8 8"></a-camera>
