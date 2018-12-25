@@ -13,9 +13,6 @@
     <!-- aframe snow component -->
     <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script> 
 
-    <!-- css -->
-    <script src="index.css"></script>
-
     <script>
       // Simple script to reset the camera position to its initial position.
       AFRAME.registerComponent('tap-recenter', {
@@ -69,7 +66,10 @@
                   padding: 5vh;
                   font-family: sans-serif;
                   pointer-events: auto;">
-        <img src="images/loading.png">
+        <img style="width: 70%;
+                    max-width: 70%;
+                    height: auto;" 
+             src="images/loading.png">
       </div>
     </div>
 
@@ -77,10 +77,8 @@
     <a-scene xrweb tap-recenter loading-screen>
 
         <a-assets>
-            <a-asset-item id="tree-obj" src="models/tree.obj"></a-asset-item>
-            <a-asset-item id="tree-mtl" src="models/tree.mtl"></a-asset-item>
-            <a-asset-item id="mone-obj" src="models/monetree.obj"></a-asset-item>
-            <a-asset-item id="mone-mtl" src="models/monetree.mtl"></a-asset-item>
+            <a-asset-item id="tree-obj" src="models/moneXtree.obj"></a-asset-item>
+            <a-asset-item id="tree-mtl" src="models/moneXtree.mtl"></a-asset-item>
         </a-assets>
 
       <a-camera position="0 8 8"></a-camera>
@@ -118,16 +116,6 @@
 
         position="0 0 0"
         scale="1.5 1.5 1.5"
-        rotation="0 0 0">
-      </a-entity>
-
-      <a-entity 
-        id="mone"
-        obj-model="obj:#mone-obj;
-                  mtl:#mone-mtl;"
-
-        position="-1 -1 0"
-        scale="3 3 3"
         rotation="0 0 0">
       </a-entity>
 
